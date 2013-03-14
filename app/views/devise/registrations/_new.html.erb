@@ -1,0 +1,73 @@
+
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <legend class="text-center">or sign up with registration below</legend>
+    <%= devise_error_messages! %>
+  <label>
+  	<%= f.email_field :email, :class => "input-block-level", :placeholder => "Email" %>
+    
+  </label>
+  <label class="row-fluid">
+  	<span class="span6">
+	  	<%= f.text_field :first_name, :class => "input-block-level", :placeholder => "First name" %>
+	  	
+	  </span>
+	  <span class="span6">
+	      <%= f.text_field :last_name, :class => "input-block-level", :placeholder => "Last name" %>
+      </span>
+  </label>
+  <!-- <label>
+  	<%= f.text_field :last_name, :class => "input-block-level", :placehoder => "Last name" %>
+    <input name="username" type="text" placeholder="Username" class="input-block-level">
+  </label> -->
+  <label>
+  	<%= f.password_field :password, :class => "input-block-level", :placeholder => "Password" %>
+   
+  </label>
+  <label>
+  	<%= f.password_field :password_confirmation, :class => "input-block-level", :placeholder => "Confirmation password" %>
+    
+  </label>
+  <label>
+  	<%= f.text_field :school, :class => "input-block-level", :placeholder => "School" %>
+  	
+  </label>
+  <label>
+  	<%= f.text_field :location, :class => "input-block-level", :placeholder => "Location" %>
+    
+  </label>
+  <label>
+  	<%= f.text_field :major, :class => "input-block-level", :placeholder => "Major" %>
+    
+  </label>
+  <label>
+  	<%= f.text_field :country, :class => "input-block-level", :placeholder => "Country" %>
+    
+  </label>
+  <label><span>Captcha here</span></label>
+  <label class="form-bt text-center">
+  	<%= f.submit "Sign up", :class => "btn btn-danger" %>
+    
+  </label>
+  <label class="signupsuggest text-center">
+    <p class="text-center">Already a member?<a href="#">login</a></p>
+  </label>
+<% end %>
+<!-- 
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+<p><%= f.label :first_name %><br />
+  <%= f.text_field :first_name %></p>
+  <p><%= f.label :email %><br />
+  <%= f.email_field :email %></p>
+
+  <p><%= f.label :password %><br />
+  <%= f.password_field :password %></p>
+
+  <p><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></p>
+
+  <p><%= f.submit "Sign up" %></p>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %> -->

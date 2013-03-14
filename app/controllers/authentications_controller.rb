@@ -1,6 +1,7 @@
 class AuthenticationsController < ApplicationController
   
   # Load user's authentications (Twitter, Facebook, ....)
+  
   def index
     @authentications = current_user.authentications if current_user
   end
@@ -48,6 +49,7 @@ class AuthenticationsController < ApplicationController
   end
   
   def create_new_omniauth_user(omniauth)
+    
     user = User.new
     user.apply_omniauth(omniauth, true)
     if user.save

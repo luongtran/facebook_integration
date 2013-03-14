@@ -1,6 +1,136 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p> </p>
-<% end %>
-
-
+<div class="wrapmainbody">
+        <div class="container">
+          <div class="row-fluid">
+            <div class="span5">
+              <div class="intro">
+                <p>Xpand is your path to getting more rewarding jobs and for turning jobs into a fast-track career through:<br>
+                  <ul>
+                    <li>Choosing the right career based on what you are good at and what the market needs;</li>
+                    <li>Plan career pathways;</li>
+                    <li>Managing work transitions;</li>
+                    <li>Equipping you to progress faster at home and internationally.</li>
+                  </ul>
+                </p>
+                <div class="boxlist">
+                  <div class="row-fluid">
+                    <div class="span6">
+                      <div class="simplebox blue">
+                        <div class="boxtop"></div>
+                        <div class="boxbody"><span>See what students are saying</span></div>
+                      </div>
+                    </div>
+                    <div class="span6">
+                      <div class="simplebox red">
+                        <div class="boxtop"></div>
+                        <div class="boxbody"><span>See what recruiters are saying</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="span6 offset1">
+              <div class="boxlist link">
+                <div class="row-fluid">
+                  <div class="span6">
+                    <div class="simplebox blue text-center">
+                      <div class="boxbody hoverable"><a href="#">Learn more</a></div>
+                    </div>
+                  </div>
+                  <div class="span6">
+                    <div class="simplebox red text-center">
+                      <div class="boxbody hoverable"><a href="#">xpand difference</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slidephoto">
+                <div id="slidephoto" class="carousel slide">
+                  <!--item-->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                    	<%= image_tag "demo-slidephoto.png", :alt => "Slide photo" %>
+                    	
+                      <div class="contentitem"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+                    </div>
+                    <div class="item">
+                    	<%= image_tag "demo-slidephoto.png", :alt => "Slide photo" %>
+                    	
+                      <div class="contentitem"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+                    </div>
+                    <div class="item">
+                    	<%= image_tag "demo-slidephoto.png", :alt => "Slide photo" %>
+                      <div class="contentitem"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+                    </div>
+                  </div>
+                  <div class="carousel-navi"><a href="#slidephoto" data-slide="next" class="control right">&rsaquo;</a><a href="#slidephoto" data-slide="prev" class="control left">&lsaquo;</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+<!--This is modal box-->
+    <!--Log In-->
+    <div id="loginbox" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true" class="modal modalbox hide fade">
+      <div class="modal-header">
+        <button type="button" data-dismiss="modal" aria-hidden="true" class="close">x</button>
+        <h3 id="loginLabel">Log In Using</h3>
+        <div class="row-fluid">
+          <div class="social2 span6 offset3">
+            <ul class="unstyled">
+              <li class="facebook"><a href="/auth/facebook"></a></li>
+              <li class="in"><a href="#"></a></li>
+              <li class="twitter"><a href="#"></a></li>
+              <li class="google"><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="model-body">
+        <div class="row-fluid">
+          <div class="span7">
+            <%= render "devise/sessions/new" %>
+          </div>
+          <div class="span5">
+            <div class="lastestnews">
+              <h4>Lastest news on Xpand</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Signup-->
+    <div id="signup" tabindex="-1" role="dialog" aria-labelledby="signupLabel" aria-hidden="true" class="modal modalbox hide fade">
+      <div class="modal-header">
+        <button type="button" data-dismiss="modal" aria-hidden="true" class="close">x</button>
+        <h3 id="signupLabel">Sign up using</h3>
+        <div class="row-fluid">
+          <div class="social2 span6 offset3">
+            <ul class="unstyled">
+              <li class="facebook"><a href="/auth/facebook"></a></li>
+              <li class="in"><a href="#"></a></li>
+              <li class="twitter"><a href="#"></a></li>
+              <li class="google"><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="model-body">
+        <div class="row-fluid">
+          <div class="span7">
+            <%= render "devise/registrations/new" %>
+          </div>
+          <div class="span5">
+            <div class="lastestnews">
+              <h4>Why you’ll love Xpand</h4>
+              <p>Xpand prepares you to land your perfect job.</p>
+              <p>Xpand exposes you to the same training material that Top Employers train their newly hired graduates on - helping you get a leg up from day 1 by using Xpand.</p>
+              <p>Xpand customizes to your need and makes the preparation process fun and engaging.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

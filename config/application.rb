@@ -4,12 +4,13 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
 require "rails/test_unit/railtie"
+require 'sprockets/railtie'
 
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(:default, Rails.env) if defined?(Bundler)
-
+#Bundler.require(:default, Rails.env) if defined?(Bundler)
+Bundler.require(*Rails.groups(:assets => %w(development test)))
 module Rails3MongoidDeviseOmniauth
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -43,5 +44,6 @@ module Rails3MongoidDeviseOmniauth
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password, :password_confirmation]
+    config.assets.enabled = true
   end
 end
